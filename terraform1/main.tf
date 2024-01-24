@@ -20,7 +20,7 @@ resource "yandex_compute_instance" "default" {
 
   boot_disk {
     initialize_params {
-      image_id = "e9besrroes8vu5s5ce0a" # ОС (Ubuntu, 22.04 LTS)
+      image_id = "fd88m3uah9t47loeseir" # ОС (Ubuntu, 22.04 LTS)
     }
   }
 
