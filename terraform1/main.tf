@@ -52,4 +52,7 @@ resource "yandex_compute_instance" "default" {
     subnet_id = "enpcdaf3cstj0pcf1g79" # одна из дефолтных подсетей
     nat = true # автоматически установить динамический ip
   }
+    metadata = {
+    ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
+  }
 }
