@@ -1,6 +1,6 @@
 
 locals {
-    bucket_name = "tf-intro-site-bucket"
+    bucket_name = "tf-intro-site-bucket-agolubkov"
 }
 
 // Create SA
