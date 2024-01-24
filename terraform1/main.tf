@@ -9,7 +9,7 @@ locals {
 # ресурс "yandex_compute_instance" т.е. сервер
 # Terraform будет знаеть его по имени "yandex_compute_instance.build"
 resource "yandex_compute_instance" "default" { 
-  name = "test-instance"
+  name = "BuildVM"
     allow_stopping_for_update = true
 	platform_id = "standard-v1" # тип процессора (Intel Broadwell)
 
