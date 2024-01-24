@@ -29,6 +29,6 @@ resource "yandex_compute_instance" "default" {
     nat = true # автоматически установить динамический ip
   }
     metadata = {
-    ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
+    ssh-keys = "agolubkov:${file("~/.ssh/id_rsa.pub")}"
   }
 }
