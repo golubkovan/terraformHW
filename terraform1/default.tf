@@ -13,7 +13,6 @@ locals {
 }
 
 provider "yandex" {
-  token                    = "auth_token_here"
   service_account_key_file = "/home/agolubkov/authorized_key.json"
   cloud_id                 = local.cloud_id
   folder_id                = local.folder_id
