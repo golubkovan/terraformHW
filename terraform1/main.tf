@@ -25,7 +25,7 @@ resource "yandex_compute_instance" "default" {
   }
 
   network_interface {
-    subnet_id = "enpcdaf3cstj0pcf1g79" # одна из дефолтных подсетей
+    subnet_id = "e9besrroes8vu5s5ce0a" # одна из дефолтных подсетей
     nat = true # автоматически установить динамический ip
   }
     metadata = {
