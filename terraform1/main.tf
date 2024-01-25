@@ -5,7 +5,7 @@ locals {
 
 //------------Create BuildVM---------------------//
 
-resource "yandex_compute_instance" "default" { 
+resource "yandex_compute_instance" "BuildVM" { 
   name = "BuildVM"
     allow_stopping_for_update = true
 	platform_id = "standard-v1" 
