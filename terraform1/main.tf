@@ -33,7 +33,11 @@ connection {
     private_key = file("~/.ssh/id_rsa")
     host = yandex_compute_instance.build-vm.network_interface.0.nat_ip_address
   }
+#-------/Connect to Vm build---------#
 
+  provisioner "local-exec" {
+    command = "echo The server's IP address is ${self.private_ip}"
+  }
   
 
 }
