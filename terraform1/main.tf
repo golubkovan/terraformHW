@@ -44,6 +44,7 @@ connection {
     inline = [
       "sudo apt update", 
       "sudo apt install docker.io -y",
+      "mkdir ~/tomcat_box",
       "cd ~/tomcat_box/",
       "sudo docker build -t tomcat_box .",
       "sudo docker tag tomcat_box agolubkov/tomcat_box",
