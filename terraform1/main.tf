@@ -37,8 +37,18 @@ connection {
 
   provisioner "file" {
     source      = "dockerfile"
-    destination = "/home/agolubkov/dockerfile"
+    destination = "/home/agolubkov/tomcat_box/dockerfile"
   }
   
+  provisioner "remote-exec" {
+    inline = [
+      "sudo apt update", 
+      "sudo apt install docker.io -y",
+      "cd ~/tomcat_box/",
+      "sudo docker build -t tomcat_box .",
+      "sudo docker tag tomcat_box agolubkov/tomcat_box",
+      
 
+    ]
+  }
 }
