@@ -3,18 +3,15 @@ locals {
     bucket_name = "tf-intro-site-bucket-agolubkov"
 }
 
-
-
 //------------Create BuildVM---------------------//
-# ресурс "yandex_compute_instance" т.е. сервер
-# Terraform будет знаеть его по имени "yandex_compute_instance.build"
+
 resource "yandex_compute_instance" "default" { 
   name = "BuildVM"
     allow_stopping_for_update = true
-	platform_id = "standard-v1" # тип процессора (Intel Broadwell)
+	platform_id = "standard-v1" 
 
   resources {
-    core_fraction = 5 # Гарантированная доля vCPU
+    core_fraction = 5 
     cores  = 2 # vCPU
     memory = 2 # RAM
   }
@@ -31,5 +28,5 @@ resource "yandex_compute_instance" "default" {
   }
   metadata = {
     user-data = "${file("meta.txt")}"
-}
+  }
 }
