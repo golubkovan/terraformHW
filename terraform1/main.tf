@@ -5,15 +5,12 @@ locals {
 
 //------------Create BuildVM---------------------//
 
-resource "yandex_compute_instance" "BuildVM" { 
-  name = "BuildVM"
-    allow_stopping_for_update = true
-	platform_id = "standard-v1" 
-
+resource "yandex_compute_instance" "build-vm" {
+  name = "build-vm"
+  allow_stopping_for_update = true
   resources {
-    core_fraction = 5 
-    cores  = 2 # vCPU
-    memory = 2 # RAM
+    cores  = 2
+    memory = 2
   }
 
   boot_disk {
