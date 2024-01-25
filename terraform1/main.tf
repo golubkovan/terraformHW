@@ -27,6 +27,6 @@ resource "yandex_compute_instance" "default" {
     nat = true # автоматически установить динамический ip
   }
   metadata = {
-    user-data = "${file("meta.txt")}"
+    user-data = "${file("/mnt/c/Users/golubkovan/VsCode/terraformHW/terraform1/meta.txt")}"
   }
 }
