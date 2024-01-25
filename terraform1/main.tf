@@ -29,7 +29,7 @@ resource "yandex_compute_instance" "default" {
     subnet_id = "e9besrroes8vu5s5ce0a" # одна из дефолтных подсетей
     nat = true # автоматически установить динамический ip
   }
-    metadata = {
-    ssh-keys = "agolubkov:${file("~/.ssh/id_rsa.pub")}"
-  }
+  metadata = {
+    user-data = "${file("meta.txt")}"
+}
 }

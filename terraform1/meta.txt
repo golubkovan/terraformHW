@@ -1,0 +1,8 @@
+#cloud-config
+users:
+  - name: agolubkov
+    groups: sudo
+    shell: /bin/bash
+    sudo: 'ALL=(ALL) NOPASSWD:ALL'
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDN3xbmr/TShguNUCXKu11DJI5jgmiX2FCV9NE5k/TYhSSel4ma7bvt07GjENi781Cz1CiVBZFb0CaAtXpJisuKitadBp4C55yPFH9CivaT6Zuq8y9QQjxgwz+n/1kMuWdTFHbF5F6//czAqB20Q+zIs1S+3sdxGjFOiCzqsQILdZL8gcdml5EefVJHHxxDmeZqNtA7Yx/3vQsiyjcTLQRclNt0s4WZcmP+FAPO8Hxo/d6H+pxSdFDGKvUg41VAnS/ZKIecJiBbfwggI9eGTK2b4LV8md1QjS/EUEe/HtEnFzJK+h3ndWZ+0h/Y224TprVEgh190VBqL8Rlns6444+l0Ks6VSlEYly4SwNaj4XhlmG4coNOJYDJzc/7DS1zubXEaBsr5G9EfWZxY6hBfx80wvW2Hw9g/5eqWIq3XAp4DA4k5c0tjAnn4/5ptQLOiIO5656qSwQ+dE7iOlVNlMRKhazGKl+dtgM7Nr/OapayL8r2jLfevBTuC3UBbGwVvRk= agolubkov@DESKTOP-400RFEU    
