@@ -3,6 +3,8 @@ locals {
     bucket_name = "tf-intro-site-bucket-agolubkov"
 }
 
+
+
 //------------Create BuildVM---------------------//
 
 resource "yandex_compute_instance" "build-vm" {
@@ -49,7 +51,8 @@ connection {
       "cd ~/tomcat_box/",
       "sudo docker build -t tomcat_box .",
       "sudo docker tag tomcat_box agolubkov/tomcat_box",
-      
+      "sudo docker tag mysite1 cr.yandex/${yandex_container_registry.agolubkovreg.id}/tomcat_box",
+      "sudo docker push cr.yandex/${yandex_container_registry.agolubkovreg.id}/tomcat_box"
 
     ]
   }
