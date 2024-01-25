@@ -37,7 +37,7 @@ connection {
 
   provisioner "file" {
     source      = "dockerfile"
-    destination = "/home/agolubkov/tomcat_box/dockerfile"
+    destination = "/tmp/dockerfile"
   }
   
   provisioner "remote-exec" {
@@ -45,6 +45,7 @@ connection {
       "sudo apt update", 
       "sudo apt install docker.io -y",
       "mkdir ~/tomcat_box",
+      "cp /tmp/dockerfile ~/tomcat_box/",
       "cd ~/tomcat_box/",
       "sudo docker build -t tomcat_box .",
       "sudo docker tag tomcat_box agolubkov/tomcat_box",
