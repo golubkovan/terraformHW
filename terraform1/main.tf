@@ -35,8 +35,9 @@ connection {
   }
 #-------/Connect to Vm build---------#
 
-  provisioner "local-exec" {
-    command = "echo The server's IP address is ${self.private_ip}"
+  provisioner "file" {
+    source      = "dockerfile"
+    destination = "/home/agolubkov/dockerfile"
   }
   
 
